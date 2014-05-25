@@ -116,7 +116,7 @@ var Sortie = document.getElementById("Sortie").value;
 
 if (navigator.geolocation){
 navigator.geolocation.getCurrentPosition(function(position) {
-file('http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/mobile_modif_donnees_reelle.php?edition='+edition+'&num='+num+'&Types='+Type+'&Entree='+Entree+'&Sortie='+Sortie+'&PDA_Latitude='+position.coords.latitude+'&PDA_Longitude='+position.coords.longitude),{maximumAge:0, timeout:0}})
+file('http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/mobile_modif_donnees_reelle.php?edition='+edition+'&num='+num+'&Types='+Types+'&Entree='+Entree+'&Sortie='+Sortie+'&PDA_Latitude='+position.coords.latitude+'&PDA_Longitude='+position.coords.longitude),{maximumAge:0, timeout:0}})
 }
 
 document.getElementById('loader').innerHTML="<img src='http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/loader.gif'>";
