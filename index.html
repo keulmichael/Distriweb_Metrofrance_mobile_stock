@@ -57,7 +57,7 @@ document.getElementById('pic').style.visibility="hidden";}
 
 function rechargerPage(edition,societe) {
 document.getElementById('loader').innerHTML="<img src='http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/loader.gif'>";
-var tournee = document.getElementById("type").value;
+var type = document.getElementById("type").value;
 writediv(file('http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/index.php?edition='+edition+'&societe='+societe+'&types_choix='+type+'&action=commencer&envoi=email'));
 document.getElementById('pic').style.visibility="hidden";}
 
