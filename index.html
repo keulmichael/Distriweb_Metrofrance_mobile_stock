@@ -120,7 +120,7 @@ file('http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/mobile_mod
 }
 
 document.getElementById('loader').innerHTML="<img src='http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/loader.gif'>";
-self.setTimeout("writediv(file('http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/index.php?edition="+edition+"&societe="+societe+"&type="+Types+"&action=commencer'));", 3000);
+self.setTimeout("writediv(file('http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/index.php?edition="+edition+"&societe="+societe+"&types_choix="+Types+"&action=commencer'));", 3000);
 document.getElementById('pic').style.visibility="hidden";
 document.getElementById('open_camera_button').style.visibility="hidden";
 }
