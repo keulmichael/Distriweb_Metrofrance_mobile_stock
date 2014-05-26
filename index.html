@@ -72,15 +72,15 @@ document.getElementById('loader').innerHTML="<img src='http://distriweb.metrofra
 writediv(file('http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/chargement.php?edition='+edition));
 document.getElementById('pic').style.visibility="hidden";}
 
-function retourIndex(edition) {
+function retourIndex(edition,societe) {
 document.getElementById('loader').innerHTML="<img src=''http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/loader.gif'>";
-writediv(file('http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/index.php?edition='+edition));
+writediv(file('http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/index.php?edition='+edition+'&societe='+societe);
 document.getElementById('pic').style.visibility="hidden";}
 
-function retourCommencer(edition) {
+function retourCommencer(edition,societe) {
 document.getElementById('loader').innerHTML="<img src='http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/loader.gif'>";
-var tournee = document.getElementById("T").value;
-writediv(file('http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/index.php?edition='+edition+'&t_choix='+tournee+'&action=commencer'));
+var Types = document.getElementById("Types").value;
+writediv(file('http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/index.php?edition='+edition+'&societe='+societe+'&types_choix='+Types+'&action=commencer'));
 document.getElementById('open_camera_button').style.visibility="hidden";
 document.getElementById('pic').style.visibility="hidden";}
 
