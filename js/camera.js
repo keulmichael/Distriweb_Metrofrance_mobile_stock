@@ -164,9 +164,10 @@ if (states[networkState] == 'Pas de connexion réseau') {
         
 else
 {
-var num = document.getElementById("num").value;
-var edition = document.getElementById("edition").value;
+var num = document.getElementById("num").value;alert(num);
+var edition = document.getElementById("edition").value;alert(edition);
     var fichierupload = encodeURI("http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/photo.php?edition="+edition+"&num="+num+"&imageData="+imageData);
+    alert(fichierupload);
     var photo = getElement("pic");
     photo.style.display = "block";
     photo.src = imageData;
