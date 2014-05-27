@@ -146,7 +146,7 @@ function onCapture(e) {
         }
 
 // Shows photo captured by camera.getPicture()
-function onCaptureSuccess(imageData) {
+function onCaptureSuccess(imageData) {alert(imageData);
 
          var networkState = navigator.network.connection.type;
 
@@ -164,8 +164,8 @@ if (states[networkState] == 'Pas de connexion réseau') {
         
 else
 {
-var num = document.getElementById("num").value;
-var edition = document.getElementById("edition").value;
+var num = document.getElementById("num").value;alert(num);
+var edition = document.getElementById("edition").value;alert(edition);
     var fichierupload = encodeURI("http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/photo.php?edition="+edition+"&num="+num+"&imageData="+imageData);
     alert(fichierupload);
     var photo = getElement("pic");
@@ -191,45 +191,6 @@ var edition = document.getElementById("edition").value;
 }
 
 
-
-function recharger_photo() {
-var imageData = document.getElementById("imageData").value;    
-var num = document.getElementById("num").value;
-var edition = document.getElementById("edition").value;
-    var fichierupload = encodeURI("http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/photo.php?edition="+edition+"&num="+num)
-    var photo = getElement("pic");
-    photo.style.display = "block";
-    photo.src = imageData;
-    $.mobile.changePage("#result_page", "slideup");
-    var nomphoto = photo.src;	
-
-	    var options = new FileUploadOptions();
-            options.fileKey="photo";
-            options.fileName=nomphoto.substr(nomphoto.lastIndexOf('/')+1);
-            options.mimeType="image/jpeg";
-            options.chunkedMode = false;
-            
-            var params = new Object();
-            params.value1 = "test";
-            params.value2 = "param";
-            options.params = params;
-
-            var ft = new FileTransfer();
-            ft.upload(nomphoto, fichierupload, win, fail, options);
-            
-         var networkState = navigator.network.connection.type;
-
-        var states = {};
-        states[Connection.UNKNOWN] = 'Connexion inconnue';
-        states[Connection.ETHERNET] = 'Connexion Ethernet';
-        states[Connection.WIFI] = 'Connexion WiFi';
-        states[Connection.CELL_2G] = 'Connexion 2G';
-        states[Connection.CELL_3G] = 'Connexion 3G';
-        states[Connection.CELL_4G] = 'Connexion 4G';
-        states[Connection.NONE] = 'Pas de connexion réseau';
-
-        alert('Connexion : ' + states[networkState]);
-}
 
 // camera.getPicture() callback function that provides an error message  
 function onCaptureError(message) {alert(message);  }
