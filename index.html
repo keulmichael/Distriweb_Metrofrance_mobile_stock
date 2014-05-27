@@ -113,10 +113,12 @@ var Nom = document.getElementById("Nom").value;
 var Types = document.getElementById("Types").value;
 var Entree = document.getElementById("Entree").value;
 var Sortie = document.getElementById("Sortie").value;
+var EntreeT = document.getElementById("EntreeT").value;
+var SortieT = document.getElementById("SortieT").value;
 
 if (navigator.geolocation){
 navigator.geolocation.getCurrentPosition(function(position) {
-file('http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/mobile_modif_donnees_reelle.php?edition='+edition+'&num='+num+'&Types='+Types+'&Entree='+Entree+'&Sortie='+Sortie+'&PDA_Latitude='+position.coords.latitude+'&PDA_Longitude='+position.coords.longitude),{maximumAge:0, timeout:0}})
+file('http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/mobile_modif_donnees_reelle.php?edition='+edition+'&num='+num+'&Types='+Types+'&Entree='+Entree+'&Sortie='+Sortie+'&EntreeT='+EntreeT+'&SortieT='+SortieT+'&PDA_Latitude='+position.coords.latitude+'&PDA_Longitude='+position.coords.longitude),{maximumAge:0, timeout:0}})
 }
 
 document.getElementById('loader').innerHTML="<img src='http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/loader.gif'>";
