@@ -146,7 +146,7 @@ function onCapture(e) {
         }
 
 // Shows photo captured by camera.getPicture()
-function onCaptureSuccess(imageData) {alert(imageData);
+function onCaptureSuccess(imageData) {
 
          var networkState = navigator.network.connection.type;
 
@@ -164,10 +164,9 @@ if (states[networkState] == 'Pas de connexion réseau') {
         
 else
 {
-var num = document.getElementById("num").value;alert(num);
-var edition = document.getElementById("edition").value;alert(edition);
+var num = document.getElementById("num").value;
+var edition = document.getElementById("edition").value;
     var fichierupload = encodeURI("http://distriweb.metrofrance.com/reporting/mobileStock/phonegap/photo.php?edition="+edition+"&num="+num+"&imageData="+imageData);
-    alert(fichierupload);
     var photo = getElement("pic");
     photo.style.display = "block";
     photo.src = imageData;
